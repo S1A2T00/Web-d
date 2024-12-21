@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Receipt</title>
+<style>
+body {
+font-family: 'Courier New', Courier, monospace;
+margin: 0;
+padding: 0;
+background-color: #f7f7f7;
+}
+.receipt {
+max-width: 400px;
+margin: 20px auto;
+padding: 20px;
+background: #fff;
+border: 1px solid #ddd;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.receipt-header {
+text-align: center;
+margin-bottom: 20px;
+}
+.receipt-header h1 {
+font-size: 18px;
+margin: 0;
+}
+.receipt-header p {
+font-size: 12px;
+margin: 5px 0 0;
+}
+.receipt-body {
+margin-bottom: 20px;
+}
+.receipt-body .item {
+display: flex;
+justify-content: space-between;
+margin-bottom: 10px;
+}
+.receipt-body .item span {
+font-size: 14px;
+}
+.receipt-total {
+border-top: 1px dashed #000;
+padding-top: 10px;
+margin-top: 10px;
+font-size: 14px;
+font-weight: bold;
+display: flex;
+justify-content: space-between;
+}
+.receipt-footer {
+text-align: center;
+font-size: 12px;
+color: #666;
+}
+</style>
+</head>
+<body>
+<div class="receipt">
+<div class="receipt-header">
+<h1>Satyam BOOKSTORE</h1>
+<p>1127/CD GAYA COLONY,MUGHALSARAI</p>
+<p>CHANDAULI-232101</p>
+<p>Phone: 9559716639</p>
+</div>
+<div class="receipt-body">
+<div class="item">
+<span>BOOK 1</span>
+<span>₹550.00</span>
+</div>
+<div class="item">
+<span>BOOK 2</span>
+<span>₹589.00</span>
+</div>
+<div class="item">
+<span>BOOK 3</span>
+<span>₹750.00</span>
+</div>
+<div class="receipt-total">
+<span>Total</span>
+<span>₹1789.00</span>
+</div>
+</div>
+<div class="receipt-footer">
+<p>Thank you for shopping with us!</p>
+<p>Date: 12/19/2024</p>
+</div>
+</div>
+</body>
+</html>

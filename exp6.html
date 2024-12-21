@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff; /* Light blue background */
+    }
+
+    .container {
+      width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #ffffff; /* White background */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #4CAF50; /* Green color for the heading */
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    button {
+      background-color: #4CAF50; /* Green background for button */
+      color: white; /* White text for button */
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto;
+    }
+
+    button:hover {
+      background-color: #45a049; /* Darker green when hovered */
+    }
+
+    /* Additional styling for inputs */
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="date"]:focus,
+    textarea:focus {
+      border-color: #4CAF50; /* Green border on focus */
+      box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Green shadow on focus */
+    }
+  </style>
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value;
+      let password = document.getElementById("password").value;
+      let namePattern = /^[A-Za-z]+$/; // Regular expression to check if name contains only alphabets
+
+      // Validate name
+      if (!namePattern.test(name) || name.length < 6) {
+        alert("Name should contain only alphabets and should be at least 6 characters long.");
+        return false;
+      }
+
+      // Validate password
+      if (password.length === 6) {
+        alert("Password should not be exactly 6 characters long.");
+        return false;
+      }
+
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+    <form onsubmit="return validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="sex">Sex:</label>
+      <input type="radio" id="male" name="sex" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="sex" value="female">
+      <label for="female">Female</label>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="language">Language:</label>
+      <input type="checkbox" id="english" name="language" value="english">
+      <label for="english">English</label>
+      <input type="checkbox" id="hindi" name="language" value="hindi">
+      <label for="hindi">Hindi</label>
+      <input type="checkbox" id="other" name="language" value="other">
+      <label for="other">Other</label>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
+
+
+ 
+ 

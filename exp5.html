@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .container {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="sex">Sex:</label>
+      <input type="radio" id="male" name="sex" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="sex" value="female">
+      <label for="female">Female</label>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="language">Language:</label>
+      <input type="checkbox" id="english" name="language" value="english">
+      <label for="english">English</label>
+      <input type="checkbox" id="hindi" name="language" value="hindi">
+      <label for="hindi">Hindi</label>
+      <input type="checkbox" id="other" name="language" value="other">
+      <label for="other">Other</label>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
+
+
+ 
+ 

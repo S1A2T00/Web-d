@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0f7fa;
+    }
+
+    .container {
+      width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #00796b;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    button {
+      background-color: #00796b; 
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    /* Additional styling for inputs */
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="date"]:focus,
+    textarea:focus {
+      border-color: #00796b;
+      box-shadow: 0 0 5px rgba(0, 121, 107, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Event Registration Form</h2>
+    <form>
+      <label for="event_name">Event Name:</label>
+      <input type="text" id="event_name" name="event_name" required>
+
+      <label for="name">Participant Name:</label>
+      <input type="text" id="name" name="name" pattern="[A-Za-z]{6,}" title="Name should contain only alphabets and be at least 6 characters long." required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="event_date">Event Date:</label>
+      <input type="date" id="event_date" name="event_date" required>
+
+      <label for="sessions">Preferred Sessions:</label>
+      <select id="sessions" name="sessions" required>
+        <option value="session1">Session 1: Introduction</option>
+        <option value="session2">Session 2: Advanced Topics</option>
+        <option value="session3">Session 3: Q&A</option>
+      </select>
+
+      <label for="dietary">Dietary Restrictions:</label>
+      <input type="checkbox" id="vegetarian" name="dietary" value="vegetarian">
+      <label for="vegetarian">Vegetarian</label>
+      <input type="checkbox" id="vegan" name="dietary" value="vegan">
+      <label for="vegan">Vegan</label>
+      <input type="checkbox" id="glutenfree" name="dietary" value="glutenfree">
+      <label for="glutenfree">Gluten-Free</label>
+
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments" rows="4"></textarea>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
+
+
+ 
+ 

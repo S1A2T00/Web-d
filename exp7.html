@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff9800; 
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        input[type="submit"] {
+            background-color: #2196f3;
+        }
+
+        input[type="reset"] {
+            background-color: #f44336;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            opacity: 0.8; 
+        }
+
+        
+        input[type="email"]:focus,
+        input[type="text"]:focus {
+            border-color: #2196f3; 
+            box-shadow: 0 0 5px rgba(33, 150, 243, 0.5); 
+        }
+    </style>
+    <script>
+        function validateForm() {
+            // Get values from the form
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+
+         
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address (e.g., name@domain.com).");
+                return false;
+            }
+
+          
+            var phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Phone number should be exactly 10 digits.");
+                return false;
+            }
+
+         
+            alert("Registration Successful!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <!-- Email Field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+            <br><br>
+            
+            
+            <div class="btn-container">
+                
+                <input type="submit" value="Submit">
+             
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+ 
+ 
